@@ -52,6 +52,18 @@ public class Employee {
 		this.gender = gender;
 	}
 
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+
 	public void listDetails() {
 		System.out.println(this.toString());
 

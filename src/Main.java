@@ -35,6 +35,23 @@ public class Main {
 			aEmployee.listDetails();
 		}
 		
+		EmployeesDB myDB = new EmployeesDB();
+		
+		myDB.add(firstEe);
+		myDB.add(secondEe);
+		myDB.add(thirdEe);
+		myDB.add(secondEe);
+		myDB.add(thirdEe);
+		myDB.add(firstEe);
+		
+		myDB.listAllEmployees();
+		
+		myDB.listBy(myDB.COMPARE_BY_FIRST_NAME);
+		myDB.remove(thirdEe);
+		myDB.listBy(myDB.COMPARE_BY_LAST_NAME);
+		myDB.listBy(myDB.COMPARE_BY_DATE);
+		
+		
 	}
 
 }
