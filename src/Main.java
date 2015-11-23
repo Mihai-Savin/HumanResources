@@ -1,3 +1,4 @@
+import java.util.*;
 
 public class Main {
 
@@ -6,7 +7,19 @@ public class Main {
 	}
 
 	private static void handleEmployees() {
-		// TODO Auto-generated method stub
+		Employee firstEe = new Employee("Mihai", "Savin", "10.07.1982", 'M');
+		Employee secondEe = new Employee("Mihai", "Savin", "10.07.1982", 'M');
+		Employee thirdEe = new Employee("Mihai", "Savin", "10.07.1982", 'M');
+		
+		ArrayList<Employee> employees = new ArrayList<Employee>();
+		employees.add(firstEe);
+		employees.add(secondEe);
+		employees.add(thirdEe);
+		
+		
+		for (Employee aEmployee : employees ) {
+			aEmployee.listDetails();
+		}
 		
 	}
 
