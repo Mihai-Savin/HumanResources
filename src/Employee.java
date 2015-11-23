@@ -1,7 +1,9 @@
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.DateTimeException;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class Employee {
 	private static int employeeIDs = 1;
@@ -35,9 +37,19 @@ public class Employee {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		Calendar now = Calendar.getInstance();
+		
+		Date today = new Date();
+		GregorianCalendar gc = new GregorianCalendar();
+		gc.setTime(today);
+		gc.add(Calendar.YEAR, -18);
+		Date yearsAgo18 = gc.getTime();
+		
 		Date begining = null;
+		today.getTime();
 		try {
-			begining = simpleDate.parse("01.01.1900");
+			begining = simpleDate.parse("01.01.1900");			
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -46,7 +58,10 @@ public class Employee {
 		if (dateOfBirthD.before(begining)) {
 			System.out.println("Out of range.");
 			throw new DateTimeException("Cannot handle Employees born before 1900.");
-
+		}
+		if (dateOfBirthD.after(yearsAgo18)) {
+			System.out.println("Too young.");
+			throw new DateTimeException("Cannot handle Employees which are still minors (18-).");
 		}
 		dateOfBirth = dateOfBirthD;
 		this.gender = gender;
