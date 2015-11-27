@@ -1,4 +1,4 @@
-package emt;
+package ro.mihaisavin.emt;
 
 import java.util.ArrayList;
 import java.util.Collections;

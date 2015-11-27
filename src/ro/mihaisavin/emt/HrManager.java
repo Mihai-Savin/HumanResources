@@ -1,8 +1,8 @@
-package emt;
+package ro.mihaisavin.emt;
 
-import static emt.Employee.FEMALE;
-import static emt.Employee.MALE;
-import static emt.Employee.UNDEFINED;
+import static ro.mihaisavin.emt.Employee.FEMALE;
+import static ro.mihaisavin.emt.Employee.MALE;
+import static ro.mihaisavin.emt.Employee.UNDEFINED;
 
 import java.time.DateTimeException;
 import javax.naming.directory.InvalidAttributesException;

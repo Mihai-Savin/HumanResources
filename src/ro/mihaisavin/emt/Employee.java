@@ -1,4 +1,4 @@
-package emt;
+package ro.mihaisavin.emt;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

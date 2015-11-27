@@ -1,4 +1,4 @@
-package emt;
+package ro.mihaisavin.emt;
 
 /**
  * This application can be used as Employee Management Tool.
